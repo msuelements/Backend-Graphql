@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Page</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="90654341856-v41411r6k8o5u90jeeq67u8pu9dchfon.apps.googleusercontent.com">
+  </head>
+  <body>
+    <h1>Testing Page</h1>
+    <p>Welcome to Testing Page</p>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  </body>
+
+  <script>
+    function onSignIn(googleUser) {
+      console.log("this will work");
+      // var profile = googleUser.getBasicProfile();
+      // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      // console.log('Name: ' + profile.getName());
+      // console.log('Image URL: ' + profile.getImageUrl());
+      // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      const id_token = googleUser.getAuthResponse().id_token;
+      console.log(id_token);
+      // var xhr = new XMLHttpRequest();
+      // xhr.open('POST', '/api/login/google');
+      // xhr.setRequestHeader('Content-Type', 'application/json');
+      // xhr.onload = function() {
+      //   console.log('Signed in as: ' + xhr.responseText);
+      //   if(xhr.responseText == 'success'){
+      //      // location.assign('/api/login/google');
+      //   }
+      // };
+      // xhr.send(JSON.stringify({token : id_token}));
+    }
+  </script>
+</html>
+

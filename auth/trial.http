@@ -1,0 +1,9 @@
+POST /token HTTP/1.1
+Host: oauth2.googleapis.com
+Content-Type: application/x-www-form-urlencoded
+
+code=4%2F0AX4XfWinbJ1lZ2vUcA7726q6kNKvue6p1WlN42cbYu3riyloY6hg9dOeXP94iFyWCg5YOw&
+client_id=90654341856-atf699cpl9aovsahv5rdtcsb4d61so6t.apps.googleusercontent.com&
+client_secret=AgUPchIAN0YjYXZz3KcZxQ9m&
+redirect_uri=http://localhost:5000/manual&
+grant_type=authorization_code
