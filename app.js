@@ -2,14 +2,14 @@ import express from "express";
 import {graphqlHTTP} from "express-graphql";
 import graphQlSchema from "./graphql/schema/index.js";
 import graphQlResolvers from "./graphql/resolver/index.js";
-import connection from "./config/database.js";
+// import connection from "./config/database.js";
 // import grahqlsc from "./graphql/schema/schema.graphql";
 // import {makeExecutableSchema} from "graphql-tools";
 
 //Initialization
 const app = express();
 app.use(express.json());
-connection.connect();
+// connection.connect();
 
 //Middlewares
 app.set('view engine', 'ejs');
@@ -41,7 +41,7 @@ app.get('/manual',(req,res)=> {
 // app.get('/auth/google',
 //     passport.authenticate('google', { scope: [ 'email', 'profile' ] }
 // ));
-const PORT =  process.env.PORT || 5000;
-app.listen(PORT);
+const port =  process.env.PORT || 5000;
+app.listen(port);
 console.log('Running a GraphQL API server at http://localhost:5000/api');
 console.log('View Engine Running at http://localhost:5000/view');
